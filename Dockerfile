@@ -14,7 +14,7 @@ RUN mvn clean install
 FROM tomcat:9.0-jdk11-openjdk-slim
 
 # Copy the built WAR file from the Maven build container to the Tomcat container
-COPY --from=build /usr/src/app/target/your-web-app.war /usr/local/tomcat/webapps/
+COPY --from=build /usr/src/app/target/wwp-1.0.0.war /usr/local/tomcat/webapps/
 
 # Expose the default Tomcat port (8080)
 EXPOSE 8080
